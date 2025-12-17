@@ -1,0 +1,12 @@
+eratani_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: eratani_user
+      password: eratani_pass
+      port: 5432
+      dbname: eratani_db
+      schema: public
+      threads: 1

@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:13
+    container_name: eratani_postgres
+    environment:
+      - POSTGRES_USER=eratani_user
+      - POSTGRES_PASSWORD=eratani_pass
+      - POSTGRES_DB=eratani_db
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U eratani_user -d eratani_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  airflow:
+    image: apache/airflow:2.7.1-python3.9
+    container_name: eratani_airflow
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://eratani_user:eratani_pass@postgres/eratani_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./dbt_project:/opt/airflow/dbt_project
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "airflow db init && 
+               airflow users create --username admin --firstname Eratani --lastname Admin --role Admin --email admin@eratani.co.id --password admin && 
+               pip install dbt-postgres pandas sqlalchemy psycopg2-binary &&
+               airflow webserver & airflow scheduler"
+    depends_on:
+      postgres:
+        condition: service_healthy

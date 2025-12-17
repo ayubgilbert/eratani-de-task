@@ -1,0 +1,19 @@
+name: "eratani_dbt"
+version: "1.0.0"
+config-version: 2
+
+profile: "eratani_profile" # Nama profil koneksi database
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+
+models:
+  eratani_dbt:
+    staging:
+      materialized: view # Data mentah cukup jadi view
+    fact:
+      materialized: table # Tabel fakta jadi tabel permanen
+    metrics:
+      materialized: table # Metrik akhir jadi tabel permanen

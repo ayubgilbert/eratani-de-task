@@ -1,0 +1,80 @@
+[0m10:19:18.632876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9ce1d370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9bed3280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9bed3250>]}
+
+
+============================== 10:19:18.640564 | 7ecf922f-1974-431f-8f34-5bfe52faa740 ==============================
+[0m10:19:18.640564 [info ] [MainThread]: Running with dbt=1.10.16
+[0m10:19:18.642438 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'introspect': 'True', 'debug': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'no_print': 'None', 'fail_fast': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'log_format': 'default', 'log_path': '/opt/airflow/dbt_project/logs', 'profiles_dir': '.', 'indirect_selection': 'eager', 'quiet': 'False', 'static_parser': 'True', 'printer_width': '80', 'invocation_command': 'dbt run --profiles-dir .', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m10:19:18.853907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ecf922f-1974-431f-8f34-5bfe52faa740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9cbd2730>]}
+[0m10:19:18.949297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ecf922f-1974-431f-8f34-5bfe52faa740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9a6972b0>]}
+[0m10:19:18.951754 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m10:19:19.032209 [debug] [MainThread]: checksum: c4b99e2e3bb042c661c8397fd92290cd0d52b31ce393ad721fa0bb3c9591dd0f, vars: {}, profile: , target: , version: 1.10.16
+[0m10:19:19.037779 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:19:19.039072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7ecf922f-1974-431f-8f34-5bfe52faa740', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9a5e6520>]}
+[0m10:19:19.925440 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.eratani_dbt.fact-farm-production' (models/fact/fact-farm-production.sql) depends on a source named 'eratani_db.staging_agriculture' which was not found
+[0m10:19:19.928979 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.3861262, "process_in_blocks": "0", "process_kernel_time": 0.203993, "process_mem_max_rss": "106312", "process_out_blocks": "776", "process_user_time": 2.771915}
+[0m10:19:19.932819 [debug] [MainThread]: Command `dbt run` failed at 10:19:19.932582 after 1.39 seconds
+[0m10:19:19.935317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9ce1d370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef992b61c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ef9a1516d0>]}
+[0m10:19:19.937470 [debug] [MainThread]: Flushing usage events
+[0m10:19:21.285764 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:24:19.492291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe369c3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe2754190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe2754130>]}
+
+
+============================== 10:24:19.499875 | 8524b5fa-e475-4740-8e8e-f73d274bb715 ==============================
+[0m10:24:19.499875 [info ] [MainThread]: Running with dbt=1.10.16
+[0m10:24:19.501330 [debug] [MainThread]: running dbt with arguments {'log_path': '/opt/airflow/dbt_project/logs', 'static_parser': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'introspect': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'profiles_dir': '.', 'write_json': 'True', 'target_path': 'None', 'empty': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'debug': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'quiet': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'printer_width': '80'}
+[0m10:24:19.723405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8524b5fa-e475-4740-8e8e-f73d274bb715', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe0f29160>]}
+[0m10:24:19.830594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8524b5fa-e475-4740-8e8e-f73d274bb715', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe4e88c70>]}
+[0m10:24:19.833480 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m10:24:19.925679 [debug] [MainThread]: checksum: c4b99e2e3bb042c661c8397fd92290cd0d52b31ce393ad721fa0bb3c9591dd0f, vars: {}, profile: , target: , version: 1.10.16
+[0m10:24:19.935256 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:24:19.937286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8524b5fa-e475-4740-8e8e-f73d274bb715', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe0dae640>]}
+[0m10:24:20.837601 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.eratani_dbt.fact-farm-production' (models/fact/fact-farm-production.sql) depends on a source named 'eratani_db.staging_agriculture' which was not found
+[0m10:24:20.841112 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.4335093, "process_in_blocks": "0", "process_kernel_time": 0.203577, "process_mem_max_rss": "106040", "process_out_blocks": "0", "process_user_time": 2.726337}
+[0m10:24:20.844648 [debug] [MainThread]: Command `dbt run` failed at 10:24:20.844387 after 1.44 seconds
+[0m10:24:20.846638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe369c3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe0a15fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75dfe0a15d90>]}
+[0m10:24:20.848710 [debug] [MainThread]: Flushing usage events
+[0m10:24:22.250600 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:24:24.659862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc103613d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0f4191f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0f419190>]}
+
+
+============================== 10:24:24.667467 | 1e09dda8-3aa1-4148-a74b-a20a197468f0 ==============================
+[0m10:24:24.667467 [info ] [MainThread]: Running with dbt=1.10.16
+[0m10:24:24.669261 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'empty': 'False', 'printer_width': '80', 'log_format': 'default', 'no_print': 'None', 'log_path': '/opt/airflow/dbt_project/logs', 'use_colors': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'write_json': 'True', 'profiles_dir': '.', 'introspect': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --profiles-dir .', 'quiet': 'False', 'static_parser': 'True', 'version_check': 'True'}
+[0m10:24:24.886253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1e09dda8-3aa1-4148-a74b-a20a197468f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0dbbd6d0>]}
+[0m10:24:24.989247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1e09dda8-3aa1-4148-a74b-a20a197468f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0dc03d90>]}
+[0m10:24:24.992016 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m10:24:25.132468 [debug] [MainThread]: checksum: c4b99e2e3bb042c661c8397fd92290cd0d52b31ce393ad721fa0bb3c9591dd0f, vars: {}, profile: , target: , version: 1.10.16
+[0m10:24:25.137839 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:24:25.139558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1e09dda8-3aa1-4148-a74b-a20a197468f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0da74bb0>]}
+[0m10:24:26.024066 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.eratani_dbt.fact-farm-production' (models/fact/fact-farm-production.sql) depends on a source named 'eratani_db.staging_agriculture' which was not found
+[0m10:24:26.026883 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.4642059, "process_in_blocks": "0", "process_kernel_time": 0.203921, "process_mem_max_rss": "106300", "process_out_blocks": "0", "process_user_time": 2.778933}
+[0m10:24:26.029510 [debug] [MainThread]: Command `dbt run` failed at 10:24:26.029381 after 1.47 seconds
+[0m10:24:26.031830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc103613d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0d67ef10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bfc0d717eb0>]}
+[0m10:24:26.034000 [debug] [MainThread]: Flushing usage events
+[0m10:24:27.199975 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:29:25.895927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d6e52310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d5f0a1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d5f0a190>]}
+
+
+============================== 10:29:25.903435 | 16c6a150-4be6-4429-8974-af02b5f3d937 ==============================
+[0m10:29:25.903435 [info ] [MainThread]: Running with dbt=1.10.16
+[0m10:29:25.904942 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/opt/airflow/dbt_project/logs', 'invocation_command': 'dbt run --profiles-dir .', 'static_parser': 'True', 'profiles_dir': '.', 'write_json': 'True', 'introspect': 'True', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'empty': 'False', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'target_path': 'None'}
+[0m10:29:26.112421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '16c6a150-4be6-4429-8974-af02b5f3d937', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d8905310>]}
+[0m10:29:26.205913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '16c6a150-4be6-4429-8974-af02b5f3d937', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d4716100>]}
+[0m10:29:26.208594 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m10:29:26.296481 [debug] [MainThread]: checksum: c4b99e2e3bb042c661c8397fd92290cd0d52b31ce393ad721fa0bb3c9591dd0f, vars: {}, profile: , target: , version: 1.10.16
+[0m10:29:26.302733 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:29:26.304333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '16c6a150-4be6-4429-8974-af02b5f3d937', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d5ee0e20>]}
+[0m10:29:27.178158 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.eratani_dbt.fact-farm-production' (models/fact/fact-farm-production.sql) depends on a source named 'eratani_db.staging_agriculture' which was not found
+[0m10:29:27.181277 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.3784775, "process_in_blocks": "0", "process_kernel_time": 0.17694, "process_mem_max_rss": "106044", "process_out_blocks": "0", "process_user_time": 2.85116}
+[0m10:29:27.183801 [debug] [MainThread]: Command `dbt run` failed at 10:29:27.183673 after 1.38 seconds
+[0m10:29:27.186064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d6e52310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d4176a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70c4d4193880>]}
+[0m10:29:27.188371 [debug] [MainThread]: Flushing usage events
+[0m10:29:28.619033 [debug] [MainThread]: An error was encountered while trying to flush usage events
