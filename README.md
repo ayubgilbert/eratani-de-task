@@ -11,4 +11,8 @@ Proyek ini dibuat untuk memenuhi Technical Assessment posisi Data Engineer di Er
    ```bash
 
    docker-compose up -d
-
+3. **Akses airflow local**
+   Pastikan compose berhasil kemudian buka localhost:8080 dari browser anda
+4. **Credential Airflow**
+   User : admin
+   Password : admin
